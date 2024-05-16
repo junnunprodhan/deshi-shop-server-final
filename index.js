@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("server is running");
 });
 
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
@@ -29,9 +29,9 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-    const userCollection = client.db("BabyCare-9").collection("user");
-    const productsCollection = client.db("BabyCare-9").collection("products");
-    const orderCollection = client.db("BabyCare-9").collection("order");
+    const userCollection = client.db("DeshiShop").collection("user");
+    const productsCollection = client.db("DeshiShop").collection("products");
+    const orderCollection = client.db("DeshiShop").collection("order");
 
     // Send a ping to confirm a successful connection
 
